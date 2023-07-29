@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ninepmx_comments",
+  "info": {
+    "singularName": "ninepmx-comment",
+    "pluralName": "ninepmx-comments",
+    "displayName": "ninepmx-comment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "comment": {
+      "type": "text",
+      "required": true
+    },
+    "ninepmx_project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ninepmx-project.ninepmx-project",
+      "inversedBy": "ninepmx_comments"
+    },
+    "ninepmx_blog": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ninepmx-blog.ninepmx-blog",
+      "inversedBy": "ninepmx_comments"
+    }
+  }
+}

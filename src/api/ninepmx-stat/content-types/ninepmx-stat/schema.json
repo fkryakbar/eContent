@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ninepmx_stats",
+  "info": {
+    "singularName": "ninepmx-stat",
+    "pluralName": "ninepmx-stats",
+    "displayName": "ninepmx-stat"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "visitors": {
+      "type": "integer"
+    },
+    "path": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}
