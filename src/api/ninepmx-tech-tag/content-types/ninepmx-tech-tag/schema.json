@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ninepmx_tech_tags",
+  "info": {
+    "singularName": "ninepmx-tech-tag",
+    "pluralName": "ninepmx-tech-tags",
+    "displayName": "ninepmx-tech-tag",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tech": {
+      "type": "string"
+    },
+    "ninepmx_projects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::ninepmx-project.ninepmx-project",
+      "inversedBy": "ninepmx_tech_tags"
+    }
+  }
+}

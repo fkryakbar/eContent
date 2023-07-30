@@ -47,6 +47,10 @@
       "relation": "oneToMany",
       "target": "api::ninepmx-comment.ninepmx-comment",
       "mappedBy": "ninepmx_blog"
+    },
+    "description": {
+      "type": "text",
+      "required": true
     }
   }
 }

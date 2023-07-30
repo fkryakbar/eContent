@@ -4,7 +4,8 @@
   "info": {
     "singularName": "ninepmx-project",
     "pluralName": "ninepmx-projects",
-    "displayName": "ninepmx-project"
+    "displayName": "ninepmx-project",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -35,12 +36,12 @@
       "required": true
     },
     "image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "project_link": {
       "type": "string"
@@ -53,6 +54,16 @@
       "relation": "oneToMany",
       "target": "api::ninepmx-comment.ninepmx-comment",
       "mappedBy": "ninepmx_project"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "ninepmx_tech_tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::ninepmx-tech-tag.ninepmx-tech-tag",
+      "mappedBy": "ninepmx_projects"
     }
   }
 }
